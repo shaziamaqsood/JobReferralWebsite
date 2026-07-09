@@ -1,50 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Referral Portal</title>
+
     <link rel="stylesheet" href="/static/css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-<h1>Job Referral Portal</h1>
+<header class="navbar">
 
-<a href="/jobs">
-View All Jobs
-</a>
+    <div class="logo">
+        <i class="fa-solid fa-briefcase"></i>
+        Job Referral Portal
+    </div>
 
-<br><br>
+    <div>
 
-<a href="/admin/login">
-Admin Login
-</a>
+        <a href="/" class="nav-btn">
+            Home
+        </a>
 
+        <a href="/jobs" class="nav-btn">
+            Jobs
+        </a>
 
-{% for job in jobs %}
+        <a href="/admin/login" class="nav-btn admin-btn">
+            Admin Login
+        </a>
 
-<div>
+    </div>
 
-<h2>{{ job.title }}</h2>
+</header>
 
-<p>
-Company: {{ job.company }}
-</p>
+<section class="hero">
 
-<p>
-Pay: {{ job.pay }}
-</p>
+    <h1>Find Your Next Opportunity</h1>
 
-<a href="/job/{{ job.id }}">
-View Details
-</a>
+    <p>
+        Browse verified referral jobs and apply directly through referral links.
+    </p>
 
-</div>
+    <a href="/jobs" class="hero-btn">
+        Explore Jobs
+    </a>
 
-<hr>
+</section>
 
-{% endfor %}
+<section class="latest">
 
+    <h2>Latest Jobs</h2>
+
+    <div class="job-grid">
+
+        {% for job in jobs %}
+
+        <div class="job-card">
+
+            <span class="badge">
+                New
+            </span>
+
+            <h3>{{ job.title }}</h3>
+
+            <p>
+                <i class="fa-solid fa-building"></i>
+                {{ job.company }}
+            </p>
+
+            <p>
+                <i class="fa-solid fa-money-bill-wave"></i>
+                {{ job.pay }}
+            </p>
+
+            <a href="/job/{{ job.id }}" class="details-btn">
+                View Details
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 Job Referral Portal | Built with Flask
+
+</footer>
 
 </body>
 
