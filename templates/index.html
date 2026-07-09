@@ -61,48 +61,37 @@
 
     <div class="job-grid">
 
-
         {% for job in jobs %}
 
-
         <div class="job-card">
-
 
             <span class="badge">
                 New
             </span>
 
-
             <h3>
                 {{ job.title }}
             </h3>
-
 
             <p>
                 <i class="fa-solid fa-building"></i>
                 {{ job.company }}
             </p>
 
-
             <p>
                 <i class="fa-solid fa-money-bill-wave"></i>
                 {{ job.pay }}
             </p>
 
-
             <a href="/job/{{ job.id }}" class="details-btn">
                 View Details
             </a>
 
-
         </div>
-
 
         {% endfor %}
 
-
     </div>
-
 
 </section>
 
@@ -112,7 +101,6 @@
     Developed by Shazia Maqsood | BS Information Technology | © 2026
 
 </footer>
-
 
 </body>
 
