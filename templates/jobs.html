@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Jobs</title>
+</head>
+
+<body>
+
+<h1>All Jobs</h1>
+
+<a href="/">Home</a>
+
+{% for job in jobs %}
+
+<div>
+    <h2>{{ job.title }}</h2>
+
+    <p>{{ job.company }}</p>
+
+    <p>{{ job.pay }}</p>
+
+    <a href="/job/{{ job.id }}">
+        View Details
+    </a>
+</div>
+
+<hr>
+
+{% endfor %}
+
+</body>
+</html>
