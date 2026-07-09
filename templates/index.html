@@ -30,17 +30,16 @@
             Jobs
         </a>
 
-        <a href="/admin/login" class="nav-btn admin-btn">
-            Admin Login
-        </a>
-
     </div>
 
 </header>
 
+
 <section class="hero">
 
-    <h1>Find Your Next Opportunity</h1>
+    <h1>
+        Find Your Next Opportunity
+    </h1>
 
     <p>
         Browse verified referral jobs and apply directly through referral links.
@@ -52,49 +51,68 @@
 
 </section>
 
+
 <section class="latest">
 
-    <h2>Latest Jobs</h2>
+    <h2>
+        Latest Jobs
+    </h2>
+
 
     <div class="job-grid">
 
+
         {% for job in jobs %}
 
+
         <div class="job-card">
+
 
             <span class="badge">
                 New
             </span>
 
-            <h3>{{ job.title }}</h3>
+
+            <h3>
+                {{ job.title }}
+            </h3>
+
 
             <p>
                 <i class="fa-solid fa-building"></i>
                 {{ job.company }}
             </p>
 
+
             <p>
                 <i class="fa-solid fa-money-bill-wave"></i>
                 {{ job.pay }}
             </p>
 
+
             <a href="/job/{{ job.id }}" class="details-btn">
                 View Details
             </a>
 
+
         </div>
+
 
         {% endfor %}
 
+
     </div>
 
+
 </section>
+
 
 <footer>
 
     Developed by Shazia Maqsood | BS Information Technology | © 2026
 
 </footer>
+
 
 </body>
 
