@@ -1,29 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{{ job.title }}</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
 </head>
+
 
 <body>
 
-<h1>{{ job.title }}</h1>
 
-<p><b>Company:</b> {{ job.company }}</p>
+<header class="navbar">
 
-<p><b>Skills:</b> {{ job.skills }}</p>
+    <div class="logo">
+        <i class="fa-solid fa-briefcase"></i>
+        Job Referral Portal
+    </div>
 
-<p><b>Pay:</b> {{ job.pay }}</p>
+    <div>
 
-<p><b>Openings:</b> {{ job.openings }}</p>
+        <a href="/" class="nav-btn">
+            Home
+        </a>
 
-<p><b>Category:</b> {{ job.category }}</p>
+        <a href="/jobs" class="nav-btn">
+            Jobs
+        </a>
 
-<p><b>Description:</b> {{ job.description }}</p>
+    </div>
 
-<a href="{{ job.referral_link }}" target="_blank">
-Apply Now
-</a>
+</header>
+
+
+
+<section class="job-details">
+
+
+    <div class="details-card">
+
+
+        <span class="badge">
+            Job Opportunity
+        </span>
+
+
+        <h1>
+            {{ job.title }}
+        </h1>
+
+
+        <p>
+            <i class="fa-solid fa-building"></i>
+            <b>Company:</b> {{ job.company }}
+        </p>
+
+
+        <p>
+            <i class="fa-solid fa-code"></i>
+            <b>Skills:</b> {{ job.skills }}
+        </p>
+
+
+        <p>
+            <i class="fa-solid fa-money-bill"></i>
+            <b>Pay:</b> {{ job.pay }}
+        </p>
+
+
+        <p>
+            <i class="fa-solid fa-users"></i>
+            <b>Openings:</b> {{ job.openings }}
+        </p>
+
+
+        <p>
+            <i class="fa-solid fa-layer-group"></i>
+            <b>Category:</b> {{ job.category }}
+        </p>
+
+
+
+        <h3>
+            Description
+        </h3>
+
+
+        <p class="description">
+            {{ job.description }}
+        </p>
+
+
+
+        <a href="{{ job.referral_link }}" target="_blank" class="apply-btn">
+
+            <i class="fa-solid fa-paper-plane"></i>
+            Apply Now
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<footer>
+
+© 2026 Job Referral Portal
+
+</footer>
+
 
 </body>
 

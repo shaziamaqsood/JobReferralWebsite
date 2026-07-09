@@ -1,32 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>All Jobs</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-<h1>All Jobs</h1>
 
-<a href="/">Home</a>
+<header class="navbar">
 
-{% for job in jobs %}
+    <div class="logo">
+        <i class="fa-solid fa-briefcase"></i>
+        Job Referral Portal
+    </div>
 
-<div>
-    <h2>{{ job.title }}</h2>
 
-    <p>{{ job.company }}</p>
+    <div>
+        <a href="/" class="nav-btn">
+            Home
+        </a>
 
-    <p>{{ job.pay }}</p>
+        <a href="/admin/login" class="nav-btn admin-btn">
+            Admin Login
+        </a>
+    </div>
 
-    <a href="/job/{{ job.id }}">
-        View Details
-    </a>
-</div>
+</header>
 
-<hr>
 
-{% endfor %}
+
+<section class="latest">
+
+    <h2>
+        All Available Jobs
+    </h2>
+
+
+    <div class="job-grid">
+
+
+        {% for job in jobs %}
+
+
+        <div class="job-card">
+
+
+            <span class="badge">
+                New
+            </span>
+
+
+            <h3>
+                {{ job.title }}
+            </h3>
+
+
+            <p>
+                <i class="fa-solid fa-building"></i>
+                {{ job.company }}
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-money-bill"></i>
+                {{ job.pay }}
+            </p>
+
+
+            <a href="/job/{{ job.id }}" class="details-btn">
+                View Details
+            </a>
+
+
+        </div>
+
+
+        {% endfor %}
+
+
+    </div>
+
+
+</section>
+
+
+
+<footer>
+    © 2026 Job Referral Portal
+</footer>
+
 
 </body>
+
 </html>

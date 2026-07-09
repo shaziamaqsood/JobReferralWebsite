@@ -1,41 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Admin Login</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
 </head>
+
 
 <body>
 
-<h1>Admin Login</h1>
+
+<header class="navbar">
+
+    <div class="logo">
+        Job Referral Portal
+    </div>
 
 
-<form method="POST">
+    <a href="/" class="nav-btn">
+        Home
+    </a>
 
-<input 
-type="text" 
-name="username" 
-placeholder="Username"
-required>
-
-<br><br>
+</header>
 
 
-<input 
-type="password" 
-name="password" 
-placeholder="Password"
-required>
 
-<br><br>
+<section class="job-details">
 
 
-<button type="submit">
-Login
-</button>
+    <form method="POST">
 
 
-</form>
+        <h2 style="text-align:center; margin-bottom:25px;">
+            Admin Login
+        </h2>
+
+
+        <input 
+        type="text" 
+        name="username" 
+        placeholder="Username"
+        required>
+
+
+        <input 
+        type="password" 
+        name="password" 
+        placeholder="Password"
+        required>
+
+
+
+        <button type="submit">
+            Login
+        </button>
+
+
+    </form>
+
+
+</section>
+
+
+
+<footer>
+    © 2026 Job Referral Portal
+</footer>
 
 
 </body>
